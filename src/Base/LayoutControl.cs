@@ -9,7 +9,7 @@ namespace Richasy.WinUI.Share.Base;
 /// <summary>
 /// 用于布局的控件基类.
 /// </summary>
-public partial class LayoutControlBase : Control
+public abstract class LayoutControlBase : Control
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="LayoutControlBase"/> class.
@@ -57,7 +57,7 @@ public partial class LayoutControlBase : Control
 /// 用于布局的控件基类.
 /// </summary>
 /// <typeparam name="TViewModel">视图模型类型.</typeparam>
-public partial class LayoutControlBase<TViewModel> : LayoutControlBase
+public abstract class LayoutControlBase<TViewModel> : LayoutControlBase
     where TViewModel : ViewModelBase
 {
     /// <summary>
