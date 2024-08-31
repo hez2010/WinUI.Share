@@ -26,6 +26,7 @@
     <PackageReference Include="CommunityToolkit.WinUI.Media" />
     <PackageReference Include="ComputeSharp.D2D1.WinUI" />
     <PackageReference Include="FluentIcons.WinUI" />
+    <PackageReference Include="Microsoft.Windows.CsWinRT" />
     <PackageReference Include="Microsoft.WindowsAppSDK" />
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" />
     <PackageReference Include="Microsoft.Graphics.Win2D" />
@@ -40,6 +41,10 @@
 
   <ItemGroup>
     <Folder Include="Base\AppTitleBar\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\bili-kernel\src\BiliKernel.SourceGenerator\BiliKernel.SourceGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
   </ItemGroup>
 
   <ItemGroup>

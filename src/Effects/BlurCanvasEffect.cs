@@ -6,7 +6,6 @@ using ComputeSharp;
 using ComputeSharp.D2D1;
 using ComputeSharp.D2D1.WinUI;
 using Microsoft.Graphics.Canvas.Effects;
-using Microsoft.UI;
 using Windows.Foundation;
 using Windows.Graphics.Effects;
 using Windows.UI;
@@ -16,7 +15,9 @@ namespace Richasy.WinUI.Share.Effects;
 /// <summary>
 /// 图像表面模糊的效果.
 /// </summary>
-public sealed class BlurCanvasEffect : CanvasEffect
+#pragma warning disable CsWinRT1029 // Class not trimming / AOT compatible
+public sealed partial class BlurCanvasEffect : CanvasEffect
+#pragma warning restore CsWinRT1029 // Class not trimming / AOT compatible
 {
     private static readonly CanvasEffectNode<BorderEffect> _borderNode = new();
     private static readonly CanvasEffectNode<ScaleEffect> _scaleNode = new();
